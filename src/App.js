@@ -1,16 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import Buttons from './containers/Buttons'
-import Calculator from './containers/Calculator'
+import MultiplyButtons from './containers/MultiplyButtons'
 
 function App() {
   return (
     <div className="App">
-      <Buttons />
-      <div className="container">
-        <Calculator />
-      </div>
+      <MultiplyButtons />
     </div>
   );
 }
