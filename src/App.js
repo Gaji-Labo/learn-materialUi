@@ -1,14 +1,44 @@
+// initial
 import React from 'react';
 import './App.css';
+import PropTypes from 'prop-types';
 
-import MultiplyButtons from './containers/MultiplyButtons'
+// redux
+import { connect } from 'react-redux';
+import { increment, decrement } from './actions/counter';
+
+// components
+import Counter from './components/counter';
 
 function App() {
   return (
     <div className="App">
-      <MultiplyButtons />
+      <Counter {...this.props} />
     </div>
   );
 }
 
-export default App;
+// proptypes
+App.propTypes = {
+  counter: PropTypes.object.isRequired,
+  dispatch_increment: PropTypes.func.isRequired,
+  dispatch_decrement: PropTypes.func.isRequired
+}
+
+// redux settings
+// state => props
+function mapStateToProps(state) {
+  return {
+    counter: state.counterReducer,
+  }
+}
+
+// dispatch => props
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch_increment: () => dispatch(increment()),
+    dispatch_decrement: () => dispatch(decrement())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
