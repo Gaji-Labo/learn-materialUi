@@ -1,5 +1,5 @@
 // initial
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import PropTypes from 'prop-types';
 
@@ -10,12 +10,14 @@ import { increment, decrement } from './actions/counter';
 // components
 import Counter from './components/counter';
 
-function App() {
-  return (
-    <div className="App">
-      <Counter {...this.props} />
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Counter {...this.props} />
+      </div>
+    );
+  }
 }
 
 // proptypes
