@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import MyButton from "../components/MyButton";
-import Display from "../components/Display";
+import MyButton from "./MyButton";
+import Display from "./Display";
 
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
