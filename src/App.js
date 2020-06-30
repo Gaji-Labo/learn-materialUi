@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 import './App.css';
 
 // components
-import Counter from './containers/Tmp';
+import Multiply from './containers/Multiply';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Counter />
+        <Multiply />
       </div>
     );
   }
