@@ -9,11 +9,13 @@ import { increment, decrement } from './actions/counter';
 
 // components
 import Counter from './components/counter';
+import Tabs from './containers/Tabs';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Tabs />
         <Counter {...this.props} />
       </div>
     );
